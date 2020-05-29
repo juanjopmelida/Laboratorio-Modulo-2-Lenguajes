@@ -14,3 +14,4 @@ const deepClone = (source) => JSON.parse(JSON.stringify(source));
 const merge = (source, target) => { return  { ...target, ...source }};
 
 // 4. Read Books
+const isBookRead = (books, titleToSearch) => books[titleToSearch].isRead;
