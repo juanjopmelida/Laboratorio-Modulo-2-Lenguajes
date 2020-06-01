@@ -1,0 +1,24 @@
+{
+  "name": "Laboratorio-Modulo-2-Lenguajes",
+  "version": "1.0.0",
+  "description": "Ejercicios entregables",
+  "main": "exercises.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanjopmelida/Laboratorio-Modulo-2-Lenguajes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanjopmelida/Laboratorio-Modulo-2-Lenguajes/issues"
+  },
+  "homepage": "https://github.com/juanjopmelida/Laboratorio-Modulo-2-Lenguajes#readme",
+  "devDependencies": {
+    "typescript": "^3.9.3"
+  }
+}
