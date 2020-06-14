@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-console */
 const firstArr: number[] = [1, 3, 5, 7, 11];
 const secondArr: number[] = [2, 4, 6];
 
@@ -36,27 +38,29 @@ const books : Book[] = [
   { title: 'Devastación', isRead: true },
 ];
 
-const isBookRead = (title) => books.find(b =>  b.title === title).isRead;
+const isBookRead = (title) => books.find((b) => b.title === title).isRead;
 
 // 5. Slot Machine
-
 class SlothMachine {
-  award: number;
-  val1: boolean;
-  val2: boolean;
-  val3: boolean;
+  award : number = 0;
+
+  val1 : boolean;
+
+  val2 : boolean;
+
+  val3 : boolean;
 
   play = () => {
     this.award += 1;
-    this.val1 = Math.random() > 0.5 ? true : false;
-    this.val2 = Math.random() > 0.5 ? true : false;
-    this.val3 = Math.random() > 0.5 ? true : false;
+    this.val1 = Math.random() > 0.5;
+    this.val2 = Math.random() > 0.5;
+    this.val3 = Math.random() > 0.5;
     console.log(this.val1, this.val2, this.val3);
     if ((this.val1 === this.val2) && (this.val2 === this.val3)) {
       console.log(`Congratulations!!!. You won ${this.award} coins!!`);
-    } 
-    else{
-      console.log(`Good luck next time!!`);
+      this.award = 0;
+    } else {
+      console.log('Good luck next time!!');
     }
   }
 }

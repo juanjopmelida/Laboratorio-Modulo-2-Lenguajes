@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-console */
 const firstArr = [1, 3, 5, 7, 11];
 const secondArr = [2, 4, 6];
 // 1. Array operations
@@ -24,21 +26,23 @@ const books = [
     { title: 'Canción de hielo y fuego', isRead: false },
     { title: 'Devastación', isRead: true },
 ];
-const isBookRead = (title) => books.find(b => b.title === title).isRead;
+const isBookRead = (title) => books.find((b) => b.title === title).isRead;
 // 5. Slot Machine
 class SlothMachine {
     constructor() {
+        this.award = 0;
         this.play = () => {
             this.award += 1;
-            this.val1 = Math.random() > 0.5 ? true : false;
-            this.val2 = Math.random() > 0.5 ? true : false;
-            this.val3 = Math.random() > 0.5 ? true : false;
+            this.val1 = Math.random() > 0.5;
+            this.val2 = Math.random() > 0.5;
+            this.val3 = Math.random() > 0.5;
             console.log(this.val1, this.val2, this.val3);
             if ((this.val1 === this.val2) && (this.val2 === this.val3)) {
                 console.log(`Congratulations!!!. You won ${this.award} coins!!`);
+                this.award = 0;
             }
             else {
-                console.log(`Good luck next time!!`);
+                console.log('Good luck next time!!');
             }
         };
     }
